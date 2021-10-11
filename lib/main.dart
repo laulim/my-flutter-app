@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const FlutterTutApp());
@@ -18,7 +17,17 @@ class FlutterTutApp extends StatelessWidget {
           title: const Text('Hello world'),
           backgroundColor: Colors.black87,
         ),
-        body: SvgPicture.asset('assets/images/cerchi-lunghi.svg')
+        body: IconButton(
+            icon: const Icon(
+            Icons.search,
+            // size: 100.0,
+          ),
+          iconSize: 50.0,
+          color: Colors.red,
+          onPressed: () {
+            print('wow');
+          },
+        )
         // floatingActionButton: FloatingActionButton(
         //   child: Text('Add'),
         //   onPressed: ,
