@@ -17,28 +17,8 @@ class FlutterTutApp extends StatelessWidget {
           title: const Text('Hello world'),
           backgroundColor: Colors.black87,
         ),
-        body: RichText(
-          text: const TextSpan(
-            style: TextStyle(
-            fontSize: 30.0,
-            color: Colors.black,
-            fontFamily: 'JetBrainsMono',
-            ),
-            children: <TextSpan>[
-              TextSpan(text: 'Hello, '),
-              TextSpan(
-                style: TextStyle(color: Colors.red),
-                children: <TextSpan>[
-                  TextSpan(text: 'Brave '),
-                  TextSpan(text: 'New '),
-                  TextSpan(text: 'World',
-                    style: TextStyle(decoration: TextDecoration.underline),
-                  ),
-                ]
-              ),
-              TextSpan(text: '!'),
-            ],
-          ),
+        body: const Image(
+          image: AssetImage('assets/images/img1.jpeg'),
         ),
         // floatingActionButton: FloatingActionButton(
         //   child: Text('Add'),
