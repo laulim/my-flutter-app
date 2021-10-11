@@ -15,6 +15,7 @@ void main() {
           fontSize: 30.0,
           fontWeight: FontWeight.bold,
           color: Colors.black87,
+          fontFamily: 'JetBrainsMono',
           ),
         )
       // floatingActionButton: FloatingActionButton(
