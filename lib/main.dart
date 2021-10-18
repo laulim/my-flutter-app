@@ -1,4 +1,6 @@
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:my_app/custom_icons.dart';
 
@@ -19,6 +21,24 @@ var icon = IconButton(
             },
           );
 
+var alignIcon = Align(
+          alignment: Alignment.topLeft,
+          child: Padding(
+            padding: EdgeInsets.all(10),
+            child: icon,
+          )
+        );
+const boxShadow = BoxShadow(
+                  color: Colors.black26,
+                  spreadRadius: 3,
+                  blurRadius: 10,
+                  offset: Offset(3,3)
+                );
+
+const imageProvider = DecorationImage(
+  image: AssetImage('assets/images/img1.jpeg'),
+  fit: BoxFit.fill,
+);
 class FlutterTutApp extends StatelessWidget {
   const FlutterTutApp({Key? key}) : super(key: key);
 
@@ -31,12 +51,36 @@ class FlutterTutApp extends StatelessWidget {
           title: const Text('Hello world'),
           backgroundColor: Colors.black87,
         ),
-        body: Align(
-          alignment: Alignment.topLeft,
-          child: Padding(
-            padding: EdgeInsets.all(10),
-            child: icon,
-          )
+        body: Container(
+          alignment: Alignment.center,
+          decoration: const BoxDecoration(
+            image: imageProvider,
+          ),
+          child: Container(
+              // color: Colors.blue[50],
+              child: icon,
+              // height: 300,
+              // width: 300,
+              padding: EdgeInsets.all(20),
+              margin: EdgeInsets.all(15),
+              alignment: Alignment.center,
+              // transform: Matrix4.rotationZ(20),
+              decoration: BoxDecoration(
+                color: Colors.blue[100],
+                // borderRadius: BorderRadius.circular(30),
+                shape: BoxShape.circle,
+                border: Border.all(
+                  width: 2,
+                  color: Colors.blue,
+                ),
+                boxShadow: const  [
+                  boxShadow,
+                ],
+                gradient: const RadialGradient(
+                  colors: [Colors.red, Colors.black],
+                )
+              ),
+            ),
         ),
         floatingActionButton: FloatingActionButton(
           child: Text('Add'),
