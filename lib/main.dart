@@ -25,33 +25,34 @@ class FlutterTutApp extends StatelessWidget {
           title: const Text('Hello world'),
           backgroundColor: Colors.black87,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-              child: Container(
-                color: Colors.amber,
-                padding: EdgeInsets.all(20),
-                child: Text('1'),
+        body: SizedBox.expand(
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              Expanded(
+                child: Container(
+                  color: Colors.amber,
+                  padding: EdgeInsets.all(150),
+                  child: Text('1'),
+                ),
               ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                color: Colors.blue,
-                padding: EdgeInsets.all(30),
-                child: Text('22222222222222', style: TextStyle(fontSize: 140),),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  color: Colors.blue,
+                  padding: EdgeInsets.all(100),
+                  child: Text('2'),
+                ),
               ),
-            ),
-            Expanded(
-              child: Container(
-                color: Colors.green,
-                padding: EdgeInsets.all(40),
-                child: Text('3'),
+              Expanded(
+                child: Container(
+                  color: Colors.green,
+                  padding: EdgeInsets.all(50),
+                  child: Text('3'),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           child: Text('Add'),
