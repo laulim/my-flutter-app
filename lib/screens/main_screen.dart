@@ -45,12 +45,6 @@ class MainScreen extends StatelessWidget {
   }
 }
 
-Widget movieCard(String movie) {
-  return Card(
-    child: Text(movie),
-  );
-}
-
 const List<String> movies = [
   'Avengers',
   'Hunger Games',
