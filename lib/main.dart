@@ -29,22 +29,27 @@ class FlutterTutApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              color: Colors.amber,
-              padding: EdgeInsets.all(20),
-              child: Text('1'),
+            Expanded(
+              child: Container(
+                color: Colors.amber,
+                padding: EdgeInsets.all(20),
+                child: Text('1'),
+              ),
             ),
-            SizedBox(height: 20),
-            Container(
-              color: Colors.blue,
-              padding: EdgeInsets.all(30),
-              child: Text('2'),
+            Expanded(
+              flex: 2,
+              child: Container(
+                color: Colors.blue,
+                padding: EdgeInsets.all(30),
+                child: Text('22222222222222', style: TextStyle(fontSize: 140),),
+              ),
             ),
-            SizedBox(height: 30),
-            Container(
-              color: Colors.green,
-              padding: EdgeInsets.all(40),
-              child: Text('3'),
+            Expanded(
+              child: Container(
+                color: Colors.green,
+                padding: EdgeInsets.all(40),
+                child: Text('3'),
+              ),
             ),
           ],
         ),
