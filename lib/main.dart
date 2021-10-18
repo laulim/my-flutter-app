@@ -8,32 +8,6 @@ void main() {
   runApp(const FlutterTutApp());
 }
 
-var icon = IconButton(
-            icon: const Icon(
-              // Icons.search,
-              MyFlutterApp.clover,
-              // size: 100.0,
-            ),
-            iconSize: 50.0,
-            color: Colors.green,
-            onPressed: () {
-              print('wow');
-            },
-          );
-
-var alignIcon = Align(
-          alignment: Alignment.topLeft,
-          child: Padding(
-            padding: EdgeInsets.all(10),
-            child: icon,
-          )
-        );
-const boxShadow = BoxShadow(
-                  color: Colors.black26,
-                  spreadRadius: 3,
-                  blurRadius: 10,
-                  offset: Offset(3,3)
-                );
 
 const imageProvider = DecorationImage(
   image: AssetImage('assets/images/img1.jpeg'),
@@ -51,7 +25,65 @@ class FlutterTutApp extends StatelessWidget {
           title: const Text('Hello world'),
           backgroundColor: Colors.black87,
         ),
-        body: Container(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              color: Colors.amber,
+              padding: EdgeInsets.all(20),
+              child: Text('1'),
+            ),
+            SizedBox(height: 20),
+            Container(
+              color: Colors.blue,
+              padding: EdgeInsets.all(30),
+              child: Text('2'),
+            ),
+            SizedBox(height: 30),
+            Container(
+              color: Colors.green,
+              padding: EdgeInsets.all(40),
+              child: Text('3'),
+            ),
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Text('Add'),
+          onPressed: () => {print('add')},
+        ),
+        // bottomNavigationBar: BottomNavigationBar(
+        // ),
+      ),
+    );
+  }
+}
+
+
+// var row = Row(
+//           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//           crossAxisAlignment: CrossAxisAlignment.baseline,
+//           textBaseline: TextBaseline.alphabetic,
+//           children: [
+//             Container(
+//               color: Colors.amber,
+//               padding: EdgeInsets.all(20),
+//               child: Text('1'),
+//             ),
+//             Container(
+//               color: Colors.blue,
+//               padding: EdgeInsets.all(30),
+//               child: Text('2'),
+//             ),
+//             Container(
+//               color: Colors.green,
+//               padding: EdgeInsets.all(40),
+//               child: Text('3'),
+//             ),
+//           ],
+//         );
+
+var container = Container(
           alignment: Alignment.center,
           decoration: const BoxDecoration(
             image: imageProvider,
@@ -81,15 +113,31 @@ class FlutterTutApp extends StatelessWidget {
                 )
               ),
             ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          child: Text('Add'),
-          onPressed: () => {print('add')},
-        ),
-        // bottomNavigationBar: BottomNavigationBar(
+        );
 
-        // ),
-      ),
-    );
-  }
-}
+var icon = IconButton(
+            icon: const Icon(
+              // Icons.search,
+              MyFlutterApp.clover,
+              // size: 100.0,
+            ),
+            iconSize: 50.0,
+            color: Colors.green,
+            onPressed: () {
+              print('wow');
+            },
+          );
+
+var alignIcon = Align(
+          alignment: Alignment.topLeft,
+          child: Padding(
+            padding: EdgeInsets.all(10),
+            child: icon,
+          )
+        );
+const boxShadow = BoxShadow(
+                  color: Colors.black26,
+                  spreadRadius: 3,
+                  blurRadius: 10,
+                  offset: Offset(3,3)
+                );
