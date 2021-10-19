@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/router.dart';
 import 'package:my_app/screens/main_screen.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -17,7 +18,13 @@ class SearchScreen extends StatelessWidget {
               return IconButton(
                 icon: const Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const MainScreen()));
+                  // Navigator.pushReplacementNamed(context, '/');
+                  // Navigator.pushNamed(context, '/');
+                  Navigator.of(context, rootNavigator: true).pushNamed('/');
+                  // Navigator.of(context).push(MaterialPageRoute(builder: (context) => const MainScreen()));
+                  // Navigator.pop(context);
+                  // Navigator.of(context).pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
+                  // Navigator.popUntil(context, ModalRoute.withName('/'));
                 }
               );
             },
