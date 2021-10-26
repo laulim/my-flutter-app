@@ -6,9 +6,8 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'WhatToWatch',
-      home: DefaultTabController(
+    return Scaffold(
+      body: DefaultTabController(
         length: 2,
         child: Scaffold(
           appBar: AppBar(
@@ -36,7 +35,7 @@ class MainScreen extends StatelessWidget {
                   );
                 },
               ),
-              Text('tab2'),
+              const Text('tab2'),
             ],
           ),
         ),

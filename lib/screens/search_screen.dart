@@ -7,31 +7,22 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'WhatToWatch',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Search'),
-          backgroundColor: Colors.red[900],
-          leading: Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                icon: const Icon(Icons.arrow_back),
-                onPressed: () {
-                  // Navigator.pushReplacementNamed(context, '/');
-                  // Navigator.pushNamed(context, '/');
-                  Navigator.of(context, rootNavigator: true).pushNamed('/');
-                  // Navigator.of(context).push(MaterialPageRoute(builder: (context) => const MainScreen()));
-                  // Navigator.pop(context);
-                  // Navigator.of(context).pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
-                  // Navigator.popUntil(context, ModalRoute.withName('/'));
-                }
-              );
-            },
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Search'),
+        backgroundColor: Colors.red[900],
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              }
+            );
+          },
         ),
-        body: Text('search screen')
       ),
+      body: const Text('search screen')
     );
   }
 }

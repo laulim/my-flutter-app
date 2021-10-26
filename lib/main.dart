@@ -18,7 +18,6 @@ class App extends StatelessWidget {
       initialRoute: WTWRoute.initialRoute,
       onGenerateRoute: WTWRoute.generate,
       onUnknownRoute: WTWRoute.unknown,
-      // routes: WTWRoute.routes,
     );
   }
 }

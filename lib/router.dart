@@ -51,3 +51,9 @@ class WTWRoute {
     return MaterialPageRoute(builder: (context) => const UndefinedView());
   }
 }
+
+final Map<String, WidgetBuilder> routes = {
+  '/': (context) => const MainScreen(),
+  '/search': (context) => const SearchScreen(),
+  // '/movie': (context, {arguments}) => const MoviePage(arguments: arguments),
+};

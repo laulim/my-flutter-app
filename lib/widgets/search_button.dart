@@ -4,7 +4,7 @@ Widget searchButton(BuildContext context) {
   return IconButton(
     icon: const Icon(Icons.search),
     onPressed: () {
-      Navigator.of(context, rootNavigator: true).pushNamed('search');
+      Navigator.of(context).pushNamed('search');
     }
   );
 }
