@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/router.dart';
 import 'package:my_app/screens/main_screen.dart';
-import 'package:my_app/screens/search_screen.dart';
 
-void main() {
+void  main() async {
   runApp(const App());
 }
 
